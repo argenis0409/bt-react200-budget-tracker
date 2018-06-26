@@ -1,12 +1,3 @@
-// import React from 'react';
-// import IncomeEntries from './components/IncomeEntries';
-// import ExpenseEntries from './components/ExpenseEntries';
-// import Summary from './components/Summary';
-
-// import { createStore, applyMiddleware } from 'redux';
-// import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
-// import { devToolsEnhancer } from 'redux-devtools-extension';
-
 import React from 'react';
 import IncomeEntries from './components/IncomeEntries';
 import ExpenseEntries from './components/ExpenseEntries';
