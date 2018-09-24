@@ -10,11 +10,6 @@ export default class ExpenseEntries extends React.Component {
   constructor(props) {
     super(props);
 
-    // Here we're binding these methods to the context
-    // of the components. This only has to be done,
-    // because these methods are called back by
-    // event emitters (which lose context).
-
     this.handleDescriptionInput = this.handleDescriptionInput.bind(this);
     this.handleAmountInput = this.handleAmountInput.bind(this);
     this.handleAddExpense = this.handleAddExpense.bind(this);
@@ -23,20 +18,17 @@ export default class ExpenseEntries extends React.Component {
   handleDescriptionInput(event) {
     const { dispatch } = this.props;
     const { value } = event.target;
-    // updateExpenseDescription is called from the expenseActions
     dispatch(updateExpenseDescription(value));
   }
 
   handleAmountInput(event) {
     const { dispatch } = this.props;
     const { value } = event.target;
-    // updateExpenseAmount is called from the expenseActions
     dispatch(updateExpenseAmount(value));
   }
 
-  handleAddExpense(event) {
+  handleAddExpense() {
     const{description, amount, dispatch} = this.props;
-    // addExpense is called from the expenseActions
     dispatch(addExpense(description, amount));
   }
 
